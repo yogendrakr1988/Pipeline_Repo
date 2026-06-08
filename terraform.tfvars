@@ -10,6 +10,11 @@ rgs = {
     location = "Central India"
   }
 
+  rg3 = {
+    name     = "test-rg"
+    location = "Central India"
+  }
+
 }
 
 stg = {
