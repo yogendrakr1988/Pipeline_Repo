@@ -3,7 +3,7 @@ resource "azurerm_resource_group" "rg" {
     name = each.value.name
     location = each.value.location
   }
-variable "rgs" {}
+
 
 resource "azurerm_storage_account" "stg" {
     depends_on = [ azurerm_resource_group.rg ]
@@ -15,4 +15,3 @@ resource "azurerm_storage_account" "stg" {
   account_replication_type = "LRS"
 }
 
-variable "stg" {}
