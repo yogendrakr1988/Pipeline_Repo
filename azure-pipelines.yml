@@ -1,0 +1,44 @@
+trigger:
+- main
+
+pool:
+  name: devOps-pool
+
+stages:
+- stage: Terraform
+  displayName: Terraform Pipeline
+  jobs:
+  - job: TerraformJob
+    displayName: Terraform Job
+    steps:
+
+    - task: TerraformInstaller@1
+      displayName: terraform install
+      inputs:
+        terraformVersion: 'latest'
+
+    - task: TerraformTaskV5@5
+      displayName: terraform init
+      inputs:
+        provider: 'azurerm'
+        command: 'init'
+        backendServiceArm: 'Yogendra-SVC'
+        backendAzureRmResourceGroupName: 'devops-rg'
+        backendAzureRmStorageAccountName: 'devopsstorage09'
+        backendAzureRmContainerName: 'devopscontainer09'
+        backendAzureRmKey: 'yogi.tfstate'
+
+    - task: TerraformTaskV5@5
+      displayName: terraform plan
+      inputs:
+        provider: 'azurerm'
+        command: 'plan'
+        environmentServiceNameAzureRM: 'Yogendra-SVC'
+
+    - task: TerraformTaskV5@5
+      displayName: terraform apply
+      inputs:
+        provider: 'azurerm'
+        command: 'apply'
+        environmentServiceNameAzureRM: 'Yogendra-SVC'
+        commandOptions: '-auto-approve'
