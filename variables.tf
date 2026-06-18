@@ -1,3 +1,2 @@
 variable "rgs" {}
 
-variable "stg" {}

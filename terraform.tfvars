@@ -1,34 +1,18 @@
 rgs = {
 
   rg1 = {
-    name     = "dev-rg"
+    name     = "mota-rg-0101"
     location = "Central India"
   }
 
   rg2 = {
-    name     = "prod-rg"
+    name     = "mota-rg-0202"
     location = "Central India"
   }
 
   rg3 = {
-    name     = "test-rg"
+    name     = "mota-rg-0303"
     location = "Central India"
-  }
-
-}
-
-stg = {
-
-  stg1 = {
-    name                = "devopsstg001"
-    resource_group_name = "dev-rg"
-    location            = "Central India"
-  }
-
-  stg2 = {
-    name                = "devopsstg002"
-    resource_group_name = "prod-rg"
-    location            = "Central India"
   }
 
 }
