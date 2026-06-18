@@ -11,7 +11,7 @@ rgs = {
   }
 
   rg3 = {
-    name     = "apple-rg-0303"
+    name     = "apple-rg-0304"
     location = "Central India"
   }
 
