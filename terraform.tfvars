@@ -96,3 +96,40 @@ subnets = {
     address_prefixes = ["10.143.2.0/26"]
   }
 }
+
+nsgs = {
+  nsgs1 = {
+     name                = "testnsg80"
+  rg_key = "rg1"
+
+ security_rule = {
+    name                       = "SSHHTTPRDP"
+    priority                   = 100
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_ranges     = ["22", "80", "3389"]
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+
+  }
+  nsgs2 = {
+     name                = "testnsg81"
+  rg_key = "rg2"
+
+   security_rule = {
+    name                       = "SSHHTTPRDP"
+    priority                   = 110
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_ranges     = ["22", "80", "3389"]
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+  }
+}
+
