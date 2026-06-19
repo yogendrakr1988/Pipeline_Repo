@@ -15,6 +15,16 @@ rgs = {
     location = "Central India"
   }
 
+  rg5 = {
+    name     = "mango-rg-0404"
+    location = "Central India"
+  }
+
+  rg6 = {
+    name     = "mango-rg-0505"
+    location = "Central India"
+  }
+
 }
 
 stgs = {
@@ -33,6 +43,12 @@ stgs = {
   stgs3 = {
   name                     = "mangostg0303"
   rg_key      = "rg3"
+  account_tier             = "Standard"
+  account_replication_type = "GRS"
+}
+  stgs3 = {
+  name                     = "mangostg0404"
+  rg_key      = "rg4"
   account_tier             = "Standard"
   account_replication_type = "GRS"
 }
