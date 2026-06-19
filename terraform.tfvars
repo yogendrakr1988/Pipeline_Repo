@@ -65,5 +65,34 @@ vnet = {
     address_space = ["10.143.0.0/16"]
     rg_key = "rg2"
   }
+}
 
+subnets = {
+  subnets01 = {
+    name             = "testsubnet01"
+    rg_key           = "rg1"
+    vnet_key         = "vnets01"
+    address_prefixes = ["10.142.1.0/24"]
+  }
+
+  subnets02 = {
+    name             = "testsubnet02"
+    rg_key           = "rg2"
+    vnet_key         = "vnets02"
+    address_prefixes = ["10.143.1.0/24"]
+  }
+
+  subnets03 = {
+    name             = "AzureBastionSubnet"
+    rg_key           = "rg1"
+    vnet_key         = "vnets01"
+    address_prefixes = ["10.142.2.0/26"]
+  }
+
+  subnets04 = {
+    name             = "AzureBastionSubnet"
+    rg_key           = "rg2"
+    vnet_key         = "vnets02"
+    address_prefixes = ["10.143.2.0/26"]
+  }
 }
