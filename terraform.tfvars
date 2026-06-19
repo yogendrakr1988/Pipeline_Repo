@@ -10,10 +10,10 @@ rgs = {
     location = "Central India"
   }
 
-  # rg3 = {
-  #   name     = "mango-rg-0303"
-  #   location = "Central India"
-  # }
+  rg3 = {
+    name     = "mango-rg-0303"
+    location = "Central India"
+  }
 
   # rg5 = {
   #   name     = "mango-rg-0404"
