@@ -10,10 +10,10 @@ rgs = {
     location = "Central India"
   }
 
-  rg3 = {
-    name     = "mango-rg-0303"
-    location = "Central India"
-  }
+  # rg3 = {
+  #   name     = "mango-rg-0303"
+  #   location = "Central India"
+  # }
 
   # rg5 = {
   #   name     = "mango-rg-0404"
@@ -52,4 +52,18 @@ stgs = {
 #   account_tier             = "Standard"
 #   account_replication_type = "GRS"
 # }
+}
+
+vnet = {
+  vnets01 = {
+    name = "testvnet90"
+    address_space = ["10.142.0.0/16"]
+    rg_key = "rg1"
+  }
+  vnets02 = {
+    name = "testvnet91"
+    address_space = ["10.143.0.0/16"]
+    rg_key = "rg2"
+  }
+
 }
