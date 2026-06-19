@@ -46,9 +46,9 @@ stgs = {
   account_tier             = "Standard"
   account_replication_type = "GRS"
 }
-  stgs3 = {
+  stgs4 = {
   name                     = "mangostg0404"
-  rg_key      = "rg4"
+  rg_key      = "rg5"
   account_tier             = "Standard"
   account_replication_type = "GRS"
 }
