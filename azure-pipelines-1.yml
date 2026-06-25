@@ -1,7 +1,7 @@
 trigger:
   - main
 
-pool: Azure Pipelines
+pool: DevOps-Pool
 
 steps:
 - task: TerraformInstaller@1
