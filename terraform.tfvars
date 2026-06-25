@@ -10,10 +10,10 @@ rgs = {
     location = "Central India"
   }
 
-  # rg3 = {
-  #   name     = "mango-rg-0303"
-  #   location = "Central India"
-  # }
+  rg3 = {
+    name     = "mango-rg-0303"
+    location = "Central India"
+  }
 
   # rg5 = {
   #   name     = "mango-rg-0404"
@@ -133,3 +133,62 @@ nsgs = {
   }
 }
 
+pips = {
+   pips01 = {
+  name                = "yogi67pip"
+  rg_key = "rg1"
+  allocation_method   = "Static"
+  }
+
+  pips03 = {
+  name                = "yogi68pip"
+  rg_key = "rg2"
+  allocation_method   = "Static"
+  }
+   pips02 = {
+  name                = "yogi69pip"
+ rg_key = "rg3"
+  allocation_method   = "Static"
+  }
+}
+
+
+nics = {
+
+  nic1 = {
+    name                = "test-nic-04"
+    rg_key = "rg1"
+
+    ip_configuration = {
+      name                          = "yogi01"
+      subnet_key                     = "subnets01"
+      private_ip_address_allocation = "Dynamic"
+      pip_key          = "pips01"
+    }
+  }
+
+  nic2 = {
+    name                = "test-nic-05"
+    rg_key = "rg2"
+
+    ip_configuration = {
+      name                          = "yogi02"
+      subnet_key                     = "subnets02"
+      private_ip_address_allocation = "Dynamic"
+      pip_key          = "pips02"
+    }
+  }
+
+  # nic31 = {
+  #   name                = "test-nic-06"
+  #   rg_key = "rg3"
+
+  #   ip_configuration = {
+  #     name                          = "yogi03"
+  #     subnet_id                     = "/subscriptions/bdb89ac3-e42b-4f59-993e-7dde7e60d4e0/resourceGroups/dev-rg-101/providers/Microsoft.Network/virtualNetworks/testvnet01/subnets/testsubnet011"
+  #     private_ip_address_allocation = "Dynamic"
+  #     public_ip_address_id          = "/subscriptions/bdb89ac3-e42b-4f59-993e-7dde7e60d4e0/resourceGroups/dev-rg-101/providers/Microsoft.Network/publicIPAddresses/yogi69pip"
+  #   }
+  # }
+
+}

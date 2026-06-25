@@ -47,6 +47,26 @@ resource "azurerm_network_security_group" "nsg" {
     destination_address_prefix = each.value.security_rule.destination_address_prefix
     
   }
-
 }
 
+resource "azurerm_public_ip" "pip" {
+  for_each = var.pips
+  name                = each.value.name
+  resource_group_name = azurerm_resource_group.rg[each.value.rg_key].name
+  location            = azurerm_resource_group.rg[each.value.rg_key].location
+  allocation_method   = each.value.allocation_method
+}
+
+resource "azurerm_network_interface" "nic8" {
+  for_each = var.nics
+  name                = each.value.name
+  location            = azurerm_resource_group.rg[each.value.rg_key].location
+  resource_group_name = azurerm_resource_group.rg[each.value.rg_key].name
+
+  ip_configuration {
+    name                          = each.value.ip_configuration.name
+    subnet_id                     = azurerm_subnet.subnet[each.value.ip_configuration.subnet_key].id
+    private_ip_address_allocation = each.value.ip_configuration.private_ip_address_allocation
+public_ip_address_id = azurerm_public_ip.pip[each.value.ip_configuration.pip_key].id  
+}
+}

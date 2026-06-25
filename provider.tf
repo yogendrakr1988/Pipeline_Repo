@@ -6,10 +6,10 @@ terraform {
     }
   }
 }
-terraform {
-  backend "azurerm" {
-  }
-}
+# terraform {
+#   backend "azurerm" {
+#   }
+# }
 
 provider "azurerm" {
   features {}
