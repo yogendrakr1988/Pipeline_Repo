@@ -74,7 +74,18 @@ subnets = {
     vnet_name        = "jumpvm-vnet"
     address_prefixes = ["10.0.2.0/24"]
   }
-
+    subnet4 = {
+    subnet_name      = "jaan02-subnet"
+    rg_name          = "yogendra_gujjar_rg"
+    vnet_name        = "frontend-vnet"
+    address_prefixes = ["10.0.3.0/24"]
+  }
+  subnet5 = {
+    subnet_name      = "jaan03-subnet"
+    rg_name          = "yogendra_gujjar_rg"
+    vnet_name        = "frontend-vnet"
+    address_prefixes = ["10.0.4.0/24"]
+  }
 }
 
 pips = {
