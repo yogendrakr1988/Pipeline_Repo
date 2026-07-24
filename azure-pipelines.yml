@@ -2,7 +2,7 @@ trigger:
   - main
 
 pool:
-  vmImage: 'DevOps-Pool'
+ name: DevOps-Pool
 
 steps:
   - task: TerraformInstaller@1
