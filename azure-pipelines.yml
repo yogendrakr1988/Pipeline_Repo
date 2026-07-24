@@ -1,0 +1,40 @@
+trigger:
+  - main
+
+pool:
+ name: DevOps-Pool
+
+steps:
+  - task: TerraformInstaller@1
+    displayName: 'Install Terraform'
+    inputs:
+      terraformVersion: 'latest'
+
+  - task: TerraformTask@5
+    displayName: 'Terraform Init'
+    inputs:
+      provider: 'azurerm'
+      command: 'init'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/Parent Module'
+      backendServiceArm: 'Yogi-SVC-July'
+      backendAzureRmResourceGroupName: 'yogi0101-rg'
+      backendAzureRmStorageAccountName: 'yogi0101storage'
+      backendAzureRmContainerName: 'yogi0101container'
+      backendAzureRmKey: 'yogi.tfstate'
+
+  - task: TerraformTask@5
+    displayName: 'Terraform Plan'
+    inputs:
+      provider: 'azurerm'
+      command: 'plan'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/Parent Module'
+      environmentServiceNameAzureRM: 'Yogi-SVC-July'
+
+  - task: TerraformTask@5
+    displayName: 'Terraform Apply'
+    inputs:
+      provider: 'azurerm'
+      command: 'apply'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/Parent Module'
+      commandOptions: '--auto-approve'
+      environmentServiceNameAzureRM: 'Yogi-SVC-July'
