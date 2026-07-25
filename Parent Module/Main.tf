@@ -3,6 +3,12 @@ module "rgs" {
   rgs    = var.rgs
 }
 
+module "stgs" {
+  depends_on = [ module.rgs ]
+  source = "../Child Module/storage_account"
+  stgs   = var.stgs
+}
+
 module "vnets" {
 depends_on = [ module.rgs ]
   source = "../Child Module/VNET"

@@ -5,6 +5,16 @@ rgs = {
   }
 }
 
+stgs = {
+  stg1 = {
+  stg_name                 = "yogi0406"
+  rg_name                  = "yogendra_bhai0989_rg"
+  rg_location              = "central india"
+  account_tier             = "Standard"
+  account_replication_type = "GRS"
+}
+}
+
 vnets = {
   vnet1 = {
     vnet_name     = "frontend-vnet"
