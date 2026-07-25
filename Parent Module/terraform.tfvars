@@ -25,14 +25,14 @@ vnets = {
 
   vnet2 = {
     vnet_name     = "backend-vnet"
-    address_space = ["10.0.0.0/15"]
+    address_space = ["10.1.0.0/16"]
     rg_location = "central india"
     rg_name       = "yogendra_bhai0989_rg"
   }
 
   vnet3 = {
     vnet_name     = "jumpvm-vnet"
-    address_space = ["10.0.0.0/14"]
+    address_space = ["10.2.0.0/16"]
     rg_location = "central india"
     rg_name       = "yogendra_bhai0989_rg"
   }
@@ -76,13 +76,13 @@ subnets = {
     subnet_name      = "backend-subnet"
     rg_name          = "yogendra_bhai0989_rg"
     vnet_name        = "backend-vnet"
-    address_prefixes = ["10.0.1.0/24"]
+    address_prefixes = ["10.1.1.0/24"]
   }
  subnet3 = {
     subnet_name      = "jumpvm-subnet"
     rg_name          = "yogendra_bhai0989_rg"
     vnet_name        = "jumpvm-vnet"
-    address_prefixes = ["10.0.2.0/24"]
+    address_prefixes = ["10.2.1.0/24"]
   }
     subnet4 = {
     subnet_name      = "jaan02-subnet"
@@ -95,6 +95,12 @@ subnets = {
     rg_name          = "yogendra_bhai0989_rg"
     vnet_name        = "frontend-vnet"
     address_prefixes = ["10.0.4.0/24"]
+  }
+  subnet6 = {
+    subnet_name      = "appgw-subnet"
+    rg_name          = "yogendra_bhai0989_rg"
+    vnet_name        = "frontend-vnet"
+    address_prefixes = ["10.0.5.0/24"]
   }
 }
 
@@ -113,6 +119,12 @@ pips = {
   }
   pip3 =  {
     pip_name = "jumpvm-pip"
+    rg_name = "yogendra_bhai0989_rg"
+    rg_location = "central india"
+    allocation_method = "Static"
+  }
+  pip4 =  {
+    pip_name = "appgw-pip"
     rg_name = "yogendra_bhai0989_rg"
     rg_location = "central india"
     allocation_method = "Static"
@@ -205,4 +217,25 @@ vm2 = {
 
 #   }
 
+}
+
+appgws = {
+  appgw1 = {
+    appgw_name  = "frontend-appgw"
+    rg_name     = "yogendra_bhai0989_rg"
+    rg_location = "central india"
+    subnet_name = "appgw-subnet"
+    vnet_name   = "frontend-vnet"
+    pip_name    = "appgw-pip"
+  }
+}
+
+lbs = {
+  lb1 = {
+    lb_name     = "backend-lb"
+    rg_name     = "yogendra_bhai0989_rg"
+    rg_location = "central india"
+    subnet_name = "backend-subnet"
+    vnet_name   = "backend-vnet"
+  }
 }

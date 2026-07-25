@@ -51,3 +51,15 @@ module "vms" {
 source = "../Child Module/Linux-vm"
 vms = var.vms
 }
+
+module "appgw" {
+  depends_on = [ module.subnets, module.pips ]
+  source = "../Child Module/AppGW"
+  appgws = var.appgws
+}
+
+module "lb" {
+  depends_on = [ module.subnets ]
+  source = "../Child Module/LoadBalancer"
+  lbs = var.lbs
+}

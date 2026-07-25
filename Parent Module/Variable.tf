@@ -6,3 +6,5 @@ variable "nics" {}
 variable "pips" {}
 variable "vms" {}
 variable "nsgs" {}
+variable "appgws" {}
+variable "lbs" {}
