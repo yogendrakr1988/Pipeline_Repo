@@ -105,12 +105,12 @@ subnets = {
 }
 
 pips = {
-  pip1 =  {
-    pip_name = "frontend-pip"
-    rg_name = "yogendra_bhai0989_rg"
-    rg_location = "central india"
-    allocation_method = "Static"
-  }
+  # pip1 =  {
+  #   pip_name = "frontend-pip"
+  #   rg_name = "yogendra_bhai0989_rg"
+  #   rg_location = "central india"
+  #   allocation_method = "Static"
+  # }
   pip2 =  {
     pip_name = "backend-pip"
     rg_name = "yogendra_bhai0989_rg"
