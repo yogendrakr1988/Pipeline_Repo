@@ -1,10 +1,10 @@
-variable "rgs" {}
-variable "stgs" {}
-variable "vnets" {}
-variable "subnets" {}
-variable "nics" {}
-variable "pips" {}
-variable "vms" {}
-variable "nsgs" {}
-variable "appgws" {}
-variable "lbs" {}
+variable "rgs" {type = any}
+variable "stgs" {type = any}
+variable "vnets" {type = any}
+variable "subnets" {type = any}
+variable "nics" {type = any}
+variable "pips" {type = any}
+variable "vms" {type = any}
+variable "nsgs" {type = any}
+variable "appgws" {type = any}
+variable "lbs" {type = any}

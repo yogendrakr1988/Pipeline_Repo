@@ -132,16 +132,16 @@ pips = {
 }
 
 nics = {
-  vm1 = {
-    nic_name = "frontend-nic"
-    rg_location = "central india"
-    rg_name = "yogendra_bhai0989_rg"
-    ip_name = "sandeep-ip"
-    pip_name = "frontend-pip"
-    subnet_name = "frontend-subnet"
-    vnet_name = "frontend-vnet"
-    ip_allocation = "Dynamic"
-  }
+  # vm1 = {
+  #   nic_name = "frontend-nic"
+  #   rg_location = "central india"
+  #   rg_name = "yogendra_bhai0989_rg"
+  #   ip_name = "sandeep-ip"
+  #   pip_name = "frontend-pip"
+  #   subnet_name = "frontend-subnet"
+  #   vnet_name = "frontend-vnet"
+  #   ip_allocation = "Dynamic"
+  # }
   vm2 = {
     nic_name = "backend-nic"
     rg_location = "central india"
@@ -167,22 +167,23 @@ nics = {
 
 vms = {
 
-  vm1 = {
-    vm_name = "frontend-vm01"
-    rg_name = "yogendra_bhai0989_rg"
-    rg_location = "central india"
-    vm_size = "Standard_D2_v3"
-    admin_username = "frontendvm0001"
-    admin_password = "Yogi@2026"
-    caching = "ReadWrite"
-    stg_type = "Standard_LRS"
-    publisher = "Canonical"
-    offer = "UbuntuServer"
-    sku = "16.04-LTS"
-    version = "latest"
-    nic_name = "frontend-nic"
+  # vm1 = {
+  #   vm_name = "frontend-vm01"
+  #   rg_name = "yogendra_bhai0989_rg"
+  #   rg_location = "central india"
+  #   vm_size = "Standard_D2_v3"
+  #   admin_username = "frontendvm0001"
+  #   admin_password = "Yogi@2026"
+  #   github_token      = "ghp_123456789012345678901234567890123456"
+  #   caching = "ReadWrite"
+  #   stg_type = "Standard_LRS"
+  #   publisher = "Canonical"
+  #   offer = "UbuntuServer"
+  #   sku = "16.04-LTS"
+  #   version = "latest"
+  #   nic_name = "frontend-nic"
 
-  }
+  # }
 vm2 = {
     vm_name = "backend-vm01"
     rg_name = "yogendra_bhai0989_rg"
@@ -200,22 +201,22 @@ vm2 = {
 
   }
 
-# vm3 = {
-#     vm_name = "jump-server"
-#     rg_name = "yogendra_bhai0989_rg"
-#     rg_location = "central india"
-#     vm_size = "Standard_D2_v3"
-#     admin_username = "jumpvm"
-#     admin_password = "Yogi@2026"
-#     caching = "ReadWrite"
-#     stg_type = "Standard_LRS"
-#     publisher = "Canonical"
-#     offer = "UbuntuServer"
-#     sku = "16.04-LTS"
-#     version = "latest"
-#     nic_name = "jumpvm-nic"
+vm3 = {
+    vm_name = "jump-server"
+    rg_name = "yogendra_bhai0989_rg"
+    rg_location = "central india"
+    vm_size = "Standard_D2_v3"
+    admin_username = "jumpvm"
+    admin_password = "Yogi@2026"
+    caching = "ReadWrite"
+    stg_type = "Standard_LRS"
+    publisher = "Canonical"
+    offer = "UbuntuServer"
+    sku = "16.04-LTS"
+    version = "latest"
+    nic_name = "jumpvm-nic"
 
-#   }
+  }
 
 }
 
